@@ -117,13 +117,15 @@ zhuatech-oa/
 
 ### 微信咨询
 
-扫描下方二维码添加微信，可咨询 ZhuaTech OA 部署、二次开发、功能定制及企业数字化解决方案。
+扫描下方任一二维码添加微信，可咨询 ZhuaTech OA 部署、二次开发、功能定制及企业数字化解决方案。
 
 <p align="center">
-  <img src="docs/images/zhuatech-wechat-consulting.png" width="300" alt="知华科技微信咨询二维码｜上海如静知华信息科技有限公司" />
+  <img src="docs/images/zhuatech-wechat-consulting.png" width="280" alt="知华科技微信咨询二维码一｜上海如静知华信息科技有限公司" />
+  &nbsp;&nbsp;
+  <img src="docs/images/zhuatech-wechat-consulting-2.png" width="280" alt="知华科技微信咨询二维码二｜上海如静知华信息科技有限公司" />
 </p>
 
-<p align="center">扫码添加微信，联系知华科技</p>
+<p align="center">任选一个二维码扫码添加微信，联系知华科技</p>
 
 ### 相关关键词
 
