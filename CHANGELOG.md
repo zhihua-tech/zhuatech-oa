@@ -1,0 +1,14 @@
+# 更新日志
+
+本项目遵循 [Semantic Versioning](https://semver.org/)；版权归上海如静知华信息科技有限公司所有。
+
+## [Unreleased]
+
+### Added
+
+- 初始化知华科技 OA 社区源码版单仓库。
+- Java 21 / Spring Boot / MySQL 后端。
+- Vue 3 / Vant 移动端 H5。
+- 登录、公告、考勤、请假审批、待办与通讯录功能。
+- Docker Compose、社区协作文件与 CI。
+- 使用许可调整为仅限个人非商业学习交流，商业使用须取得书面授权。

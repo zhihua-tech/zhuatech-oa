@@ -1,0 +1,11 @@
+# Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd.
+.DS_Store
+.idea/
+.vscode/
+*.iml
+.env
+*.log
+backend/target/
+frontend/node_modules/
+frontend/dist/
+coverage/

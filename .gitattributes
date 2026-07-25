@@ -1,0 +1,6 @@
+# Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd.
+* text=auto eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
