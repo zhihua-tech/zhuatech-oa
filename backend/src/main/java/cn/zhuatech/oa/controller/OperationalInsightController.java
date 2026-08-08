@@ -19,4 +19,10 @@ public class OperationalInsightController {
     public ApiResponse<ApprovalSlaService.Assessment> assess(@Valid @RequestBody ApprovalSlaService.Request request) {
         return ApiResponse.ok(service.assess(request));
     }
+
+    @PostMapping("/approval-sla/portfolio")
+    public ApiResponse<ApprovalSlaService.PortfolioResult> rebalance(
+        @Valid @RequestBody ApprovalSlaService.PortfolioRequest request) {
+        return ApiResponse.ok(service.rebalance(request));
+    }
 }

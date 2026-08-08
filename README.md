@@ -142,3 +142,7 @@ Copyright © 2026 上海如静知华信息科技有限公司（知华科技）
 - 接口：`POST /api/operations/approval-sla`
 - 输出：`ON_TRACK`、`AT_RISK`、`BREACHED` 状态与可执行处置建议
 - 质量保障：新增鉴权集成测试，覆盖超期 P0 场景
+
+### 审批组合负载路由
+
+在单笔 SLA 判断之上，新增 `POST /api/operations/approval-sla/portfolio`。系统会按风险统一排序待办，结合审批团队的并发容量和当前负载给出承接团队、预计剩余容量与升级建议，帮助流程管理员减少“高风险事项排在队尾”和人工分单不均的问题。移动工作台已提供可直接运行的演示入口。
