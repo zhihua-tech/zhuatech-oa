@@ -31,3 +31,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。
 ## 审批 SLA 分诊
 
 `POST /api/operations/approval-sla`：提交流程名称、等待小时、SLA 小时、业务影响分及关键标记，返回风险状态、优先级、超期小时、是否升级和建议动作。
+
+## 工作日专注度
+
+`POST /api/oa/insights/workday-focus`：依据会议时长、审批积压、逾期任务、打断次数和专注时长返回专注分、风险等级与行动建议。
