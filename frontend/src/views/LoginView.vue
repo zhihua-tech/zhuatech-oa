@@ -1,4 +1,4 @@
-<!-- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. -->
+<!-- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ -->
 <script setup>
 import { reactive,ref } from 'vue'; import { useRouter } from 'vue-router'; import { showSuccessToast } from 'vant'; import { useAuthStore } from '../stores/auth'
 const form=reactive({username:'demo',password:'Demo@2026'}),loading=ref(false),router=useRouter(),auth=useAuthStore()

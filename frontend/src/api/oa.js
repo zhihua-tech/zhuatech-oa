@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 import http from './http'
 export const api = {
   login: data => http.post('/auth/login', data), me: () => http.get('/auth/me'), dashboard: () => http.get('/dashboard'),

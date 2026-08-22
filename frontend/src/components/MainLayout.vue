@@ -1,3 +1,3 @@
-<!-- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. -->
+<!-- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ -->
 <script setup>import { computed } from 'vue'; import { useRoute,useRouter } from 'vue-router'; const route=useRoute(),router=useRouter(); const active=computed({get:()=>route.path,set:v=>router.push(v)})</script>
 <template><main class="app-shell"><router-view /></main><van-tabbar v-model="active" route safe-area-inset-bottom active-color="#126e82"><van-tabbar-item name="/" to="/" icon="wap-home-o">首页</van-tabbar-item><van-tabbar-item name="/workbench" to="/workbench" icon="apps-o">工作台</van-tabbar-item><van-tabbar-item name="/contacts" to="/contacts" icon="friends-o">通讯录</van-tabbar-item><van-tabbar-item name="/profile" to="/profile" icon="user-o">我的</van-tabbar-item></van-tabbar></template>

@@ -1,4 +1,4 @@
-<!-- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. -->
+<!-- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ -->
 <script setup>
 import { onMounted,ref } from 'vue'; import { api } from '../api/oa'; import { useAuthStore } from '../stores/auth'
 const auth=useAuthStore(),dashboard=ref({pendingTasks:0,pendingLeaves:0,notices:0}),notices=ref([])

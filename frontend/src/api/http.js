@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 import axios from 'axios'
 import { showFailToast } from 'vant'
 const http = axios.create({ baseURL: import.meta.env.VITE_API_BASE || '/api', timeout: 10000 })
