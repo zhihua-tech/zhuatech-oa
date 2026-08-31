@@ -1,5 +1,9 @@
 # ZhuaTech OA — 知华科技 OA 社区源码版
 
+## 2026 企业级审批治理升级
+
+新增金额分级审批、职责分离、委托授权校验、证据完整性与审计标签，支持在流程提交前自动判定通过、升级审批或阻断。详见 [企业级审批治理](docs/ENTERPRISE_APPROVAL_GOVERNANCE.md)。
+
 [![License](https://img.shields.io/badge/license-Community_Source_Noncommercial-orange.svg)](LICENSE)
 [![Java](https://img.shields.io/badge/Java-21-ED8B00.svg)](backend/pom.xml)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0-6DB33F.svg)](backend/pom.xml)
