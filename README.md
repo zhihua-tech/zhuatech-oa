@@ -4,6 +4,10 @@
 
 新增金额分级审批、职责分离、委托授权校验、证据完整性与审计标签，支持在流程提交前自动判定通过、升级审批或阻断。详见 [企业级审批治理](docs/ENTERPRISE_APPROVAL_GOVERNANCE.md)。
 
+## 企业级公文发布治理
+
+新增最终版本、密级、收文范围、法务、签章、发文字号、附件安全、敏感数据、保管期限、业务批准、职责分离和审计证据联合门禁，详见[公文发布治理说明](docs/ENTERPRISE_OFFICIAL_DOCUMENT_PUBLICATION.md)。
+
 [![License](https://img.shields.io/badge/license-Community_Source_Noncommercial-orange.svg)](LICENSE)
 [![Java](https://img.shields.io/badge/Java-21-ED8B00.svg)](backend/pom.xml)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0-6DB33F.svg)](backend/pom.xml)
