@@ -6,9 +6,15 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class WorkdayFocusServiceTests {
     private final WorkdayFocusService service = new WorkdayFocusService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void identifiesFragmentedHighRiskWorkday() {
         var result = service.assess(new WorkdayFocusService.Request("E1008", new BigDecimal("5"), 9, 4, 8, new BigDecimal("0.5")));
         assertThat(result.riskLevel()).isEqualTo("HIGH");
@@ -16,6 +22,9 @@ class WorkdayFocusServiceTests {
         assertThat(result.actions()).hasSizeGreaterThanOrEqualTo(3);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void rewardsProtectedFocusTime() {
         var result = service.assess(new WorkdayFocusService.Request("E1021", new BigDecimal("1"), 1, 0, 1, new BigDecimal("3")));
         assertThat(result.riskLevel()).isEqualTo("LOW");

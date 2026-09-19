@@ -8,9 +8,15 @@ import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class MeetingLoadServiceTests {
     private final MeetingLoadService service = new MeetingLoadService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void identifiesHighMeetingLoad() {
         var result = service.assess(new MeetingLoadService.Request("E1008", new BigDecimal("40"),
             new BigDecimal("19"), 16, 8, 2, 1));
@@ -19,6 +25,9 @@ class MeetingLoadServiceTests {
         assertThat(result.actions()).hasSizeGreaterThanOrEqualTo(3);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void keepsHealthyScheduleLowRisk() {
         var result = service.assess(new MeetingLoadService.Request("E1021", new BigDecimal("40"),
             new BigDecimal("6"), 6, 5, 0, 4));

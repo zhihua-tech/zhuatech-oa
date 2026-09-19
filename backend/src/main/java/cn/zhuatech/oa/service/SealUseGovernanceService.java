@@ -7,8 +7,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SealUseGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request r) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -26,14 +32,26 @@ public class SealUseGovernanceService {
         String route = risk == RiskLevel.HIGH ? "部门负责人→法务→印章管理员" : "部门负责人→印章管理员";
         return new Assessment(r.requestId(), decision, risk, route, List.copyOf(blockers), List.copyOf(actions));
     }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String requestId, @NotBlank String sealType,
                           @NotBlank String requesterId, @NotBlank String custodianId,
                           @Min(1) int useCount, boolean finalDocumentApproved, boolean authorizationValid,
                           boolean legalReviewed, boolean recipientScopeConfirmed, boolean externalRecipient,
                           boolean evidenceAttached, boolean postUseArchivePlanned, boolean physicalSeal,
                           boolean sealReturnPlanned, boolean electronicSealTamperProof) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(String requestId, Decision decision, RiskLevel riskLevel, String approvalRoute,
                              List<String> blockers, List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { APPROVE, REVIEW, BLOCKED }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum RiskLevel { NORMAL, HIGH }
 }

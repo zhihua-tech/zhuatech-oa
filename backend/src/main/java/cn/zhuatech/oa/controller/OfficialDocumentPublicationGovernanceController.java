@@ -6,12 +6,21 @@ import cn.zhuatech.oa.service.OfficialDocumentPublicationGovernanceService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/enterprise/oa")
 public class OfficialDocumentPublicationGovernanceController {
     private final OfficialDocumentPublicationGovernanceService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public OfficialDocumentPublicationGovernanceController(OfficialDocumentPublicationGovernanceService service) { this.service = service; }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/official-document-publication")
     public ApiResponse<OfficialDocumentPublicationGovernanceService.Assessment> assess(
             @Valid @RequestBody OfficialDocumentPublicationGovernanceService.Request request) {

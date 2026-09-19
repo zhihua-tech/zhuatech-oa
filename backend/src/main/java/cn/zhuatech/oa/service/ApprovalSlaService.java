@@ -15,8 +15,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ApprovalSlaService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         double ratio = (double) request.pendingHours() / request.slaHours();
         int score = Math.min(100, (int) Math.round(request.businessImpact() * .4
@@ -33,7 +39,11 @@ public class ApprovalSlaService {
             "BREACHED".equals(status) || "P0".equals(priority), actions);
     }
 
-    /** 按风险排序审批队列，并根据各审批组的剩余容量给出分流建议。 */
+    /**
+     * 按风险排序审批队列，并根据各审批组的剩余容量给出分流建议。
+     *
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public PortfolioResult rebalance(PortfolioRequest request) {
         List<Assessment> queue = request.requests().stream().map(this::assess)
             .sorted(Comparator.comparingInt(Assessment::riskScore).reversed()
@@ -60,17 +70,35 @@ public class ApprovalSlaService {
             Map.copyOf(remaining), recommendation);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String processName, @Min(0) int pendingHours,
                           @Positive int slaHours, @Min(0) @Max(100) int businessImpact,
                           boolean vipApplicant, boolean missingMaterials) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(String processName, String status, String priority, int riskScore,
                              int overdueHours, boolean escalationRequired, List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record TeamCapacity(@NotBlank String teamName, @Min(1) int dailyCapacity,
                                @Min(0) int activeLoad) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record PortfolioRequest(@NotEmpty List<@Valid Request> requests,
                                    @NotEmpty List<@Valid TeamCapacity> teams) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Routing(String processName, String priority, int riskScore,
                           String targetTeam, boolean escalationRequired) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record PortfolioResult(int totalRequests, long breachedRequests, long unassignedRequests,
                                   List<Routing> routings, Map<String, Integer> remainingCapacity,
                                   String recommendation) {}

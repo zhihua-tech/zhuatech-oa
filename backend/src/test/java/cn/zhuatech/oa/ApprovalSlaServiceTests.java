@@ -9,7 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class ApprovalSlaServiceTests {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void triagesBreachedCriticalApproval() {
         var result = new ApprovalSlaService().assess(new ApprovalSlaService.Request(
             "采购合同审批", 30, 24, 85, true, true));
@@ -19,6 +25,9 @@ class ApprovalSlaServiceTests {
         assertTrue(result.escalationRequired());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void rebalancesPortfolioByRiskAndAvailableCapacity() {
         var service = new ApprovalSlaService();
         var result = service.rebalance(new ApprovalSlaService.PortfolioRequest(List.of(

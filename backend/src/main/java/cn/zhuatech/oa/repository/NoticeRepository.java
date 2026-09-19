@@ -3,4 +3,10 @@ package cn.zhuatech.oa.repository;
 import cn.zhuatech.oa.model.Notice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
-public interface NoticeRepository extends JpaRepository<Notice, Long> { List<Notice> findAllByOrderByPinnedDescPublishTimeDesc(); }
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
+public interface NoticeRepository extends JpaRepository<Notice, Long> { /**
+                                                                         * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                                         */
+List<Notice> findAllByOrderByPinnedDescPublishTimeDesc(); }

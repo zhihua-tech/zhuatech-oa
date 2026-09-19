@@ -6,10 +6,16 @@ import cn.zhuatech.oa.service.AiMeetingCopilotService;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class AiMeetingCopilotServiceTests {
     private final AiMeetingCopilotService service = new AiMeetingCopilotService(
         new OpenAiCompatibleGateway("local", "https://api.deepseek.com", "deepseek-chat", ""));
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void extractsDecisionsWithoutExternalModel() {
         var result = service.analyze(new AiMeetingCopilotService.Request("季度经营会", 60, 8, 2, 3, 0,
             "会议决定提前启动回款专项。张经理负责本周五提交方案。其他事项下周确认。"));

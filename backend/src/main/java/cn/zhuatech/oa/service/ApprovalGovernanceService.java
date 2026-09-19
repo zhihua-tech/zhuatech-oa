@@ -9,8 +9,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ApprovalGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment evaluate(ApprovalCase request) {
         int requiredLevels = request.amountCents() > 100_000_000L ? 3
                 : request.amountCents() > 10_000_000L ? 2 : 1;
@@ -26,10 +32,16 @@ public class ApprovalGovernanceService {
                 List.copyOf(blockers), tags);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record ApprovalCase(@NotBlank String caseId, @Min(0) long amountCents,
                                @Min(1) @Max(5) int currentApprovalLevel, boolean delegated,
                                boolean delegateAuthorized, boolean sameRequesterAndApprover,
                                boolean evidenceComplete) {
+        /**
+         * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+         */
         public ApprovalCase {
             if (caseId == null || caseId.isBlank()) throw new IllegalArgumentException("caseId is required");
             if (amountCents < 0) throw new IllegalArgumentException("amountCents must be non-negative");
@@ -37,6 +49,9 @@ public class ApprovalGovernanceService {
         }
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(String caseId, String decision, int requiredApprovalLevels,
                              int currentApprovalLevel, boolean segregationPassed,
                              boolean delegationValid, List<String> blockers, List<String> auditTags) {}

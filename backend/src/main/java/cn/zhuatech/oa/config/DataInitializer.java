@@ -9,10 +9,19 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Component
 public class DataInitializer implements CommandLineRunner {
     private final DepartmentRepository departments; private final UserRepository users; private final NoticeRepository notices; private final TodoTaskRepository tasks; private final PasswordEncoder encoder;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public DataInitializer(DepartmentRepository departments, UserRepository users, NoticeRepository notices, TodoTaskRepository tasks, PasswordEncoder encoder) { this.departments=departments; this.users=users; this.notices=notices; this.tasks=tasks; this.encoder=encoder; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Override @Transactional public void run(String... args) {
         if (users.count() > 0) return;
         Department tech = departments.save(new Department("TECH", "技术研发部", 10));

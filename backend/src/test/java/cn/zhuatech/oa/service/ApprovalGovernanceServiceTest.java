@@ -5,9 +5,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class ApprovalGovernanceServiceTest {
     private final ApprovalGovernanceService service = new ApprovalGovernanceService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void approvesCompliantCaseAtRequiredLevel() {
         var result = service.evaluate(new ApprovalGovernanceService.ApprovalCase(
@@ -17,6 +23,9 @@ class ApprovalGovernanceServiceTest {
         assertTrue(result.blockers().isEmpty());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void blocksSegregationAndDelegationViolations() {
         var result = service.evaluate(new ApprovalGovernanceService.ApprovalCase(

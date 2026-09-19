@@ -11,8 +11,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class MeetingLoadService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result assess(Request request) {
         BigDecimal loadRate = request.meetingHours().divide(request.weeklyCapacityHours(), 4, RoundingMode.HALF_UP);
         int optionalMeetings = Math.max(0, request.meetingCount() - request.requiredMeetings());
@@ -38,12 +44,18 @@ public class MeetingLoadService {
         return new Result(request.employeeNo(), loadRate, optionalRate, score, riskLevel, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String employeeNo,
                           @DecimalMin("1.0") BigDecimal weeklyCapacityHours,
                           @DecimalMin("0") BigDecimal meetingHours,
                           @Min(0) int meetingCount, @Min(0) int requiredMeetings,
                           @Min(0) int conflictCount, @Min(0) int focusBlockCount) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String employeeNo, BigDecimal meetingLoadRate, BigDecimal optionalMeetingRate,
                          int loadScore, String riskLevel, List<String> actions) {}
 }

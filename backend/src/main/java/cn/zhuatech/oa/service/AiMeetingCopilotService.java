@@ -11,12 +11,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class AiMeetingCopilotService {
     private final OpenAiCompatibleGateway gateway;
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public AiMeetingCopilotService(OpenAiCompatibleGateway gateway) { this.gateway = gateway; }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result analyze(Request request) {
         int qualityScore = 100;
         List<String> actions = new ArrayList<>();
@@ -46,9 +55,15 @@ public class AiMeetingCopilotService {
             enhanced.isPresent() ? "EXTERNAL_MODEL" : "LOCAL_RULES", metadata.provider(), metadata.model());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String topic, @Min(1) int durationMinutes, @Min(1) int participants,
                           @Min(0) int decisionCount, @Min(0) int actionItemCount,
                           @Min(0) int overdueActionCount, @NotBlank @Size(max = 12000) String transcript) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(int qualityScore, String status, String brief, List<String> highlights,
                          List<String> actions, String aiMode, String provider, String model) {}
 }

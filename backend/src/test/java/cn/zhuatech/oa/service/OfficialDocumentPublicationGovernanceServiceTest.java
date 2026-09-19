@@ -5,9 +5,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class OfficialDocumentPublicationGovernanceServiceTest {
     private final OfficialDocumentPublicationGovernanceService service = new OfficialDocumentPublicationGovernanceService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void publishesControlledOfficialDocument() {
         var result = service.assess(request(true, true, true));
         assertEquals(OfficialDocumentPublicationGovernanceService.Decision.PUBLISH, result.decision());
@@ -15,12 +21,18 @@ class OfficialDocumentPublicationGovernanceServiceTest {
         assertTrue(result.actions().isEmpty());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void reviewsDocumentWithOperationalActions() {
         var result = service.assess(request(false, false, false));
         assertEquals(OfficialDocumentPublicationGovernanceService.Decision.REVIEW, result.decision());
         assertEquals(3, result.actions().size());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void blocksUncontrolledOfficialDocument() {
         var result = service.assess(new OfficialDocumentPublicationGovernanceService.Request("DOC-003", "V3", 8,
                 false, false, false, false, false, false, false, false, false, false, false, false,
@@ -29,6 +41,9 @@ class OfficialDocumentPublicationGovernanceServiceTest {
         assertEquals(12, result.blockers().size());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private OfficialDocumentPublicationGovernanceService.Request request(boolean acknowledgement,
                                                                           boolean withdrawal,
                                                                           boolean archive) {

@@ -12,9 +12,16 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 审批委托启用前的时间、权限、职责分离和循环委托检查。 */
+/**
+ * 审批委托启用前的时间、权限、职责分离和循环委托检查。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ApprovalDelegationGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -37,6 +44,9 @@ public class ApprovalDelegationGovernanceService {
                 List.copyOf(request.scopes()), List.copyOf(blockers), List.copyOf(actions));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String delegationId, @NotBlank String principalId,
                           @NotBlank String delegateId, @NotEmpty List<@NotBlank String> scopes,
                           @NotNull Instant effectiveFrom, @NotNull Instant effectiveTo,
@@ -46,9 +56,15 @@ public class ApprovalDelegationGovernanceService {
                           @Min(0) @Max(100) int delegateLoadPercent,
                           boolean notificationPlanned, boolean auditEvidenceAttached) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(String delegationId, Decision decision, Instant effectiveFrom,
                              Instant effectiveTo, List<String> scopes, List<String> blockers,
                              List<String> actions) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { ACTIVATE, REVIEW, BLOCKED }
 }

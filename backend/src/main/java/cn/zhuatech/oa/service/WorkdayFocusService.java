@@ -11,8 +11,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class WorkdayFocusService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result assess(Request request) {
         int score = 100;
         score -= Math.min(30, request.meetingHours().multiply(BigDecimal.valueOf(6)).intValue());
@@ -33,12 +39,18 @@ public class WorkdayFocusService {
         return new Result(request.employeeNo(), score, riskLevel, recommendedFocusBlocks, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String employeeNo,
                           @DecimalMin("0") BigDecimal meetingHours,
                           @Min(0) int pendingApprovals, @Min(0) int overdueTasks,
                           @Min(0) int interruptionCount,
                           @DecimalMin("0") BigDecimal focusHours) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String employeeNo, int focusScore, String riskLevel,
                          int recommendedFocusBlocks, List<String> actions) {}
 }

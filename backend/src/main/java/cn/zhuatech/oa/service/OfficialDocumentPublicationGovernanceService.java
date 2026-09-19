@@ -7,8 +7,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class OfficialDocumentPublicationGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -32,6 +38,9 @@ public class OfficialDocumentPublicationGovernanceService {
                 List.copyOf(blockers), List.copyOf(actions));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String documentNo, @NotBlank String versionNo, @Positive int pageCount,
                           boolean finalVersionFrozen, boolean classificationAssigned,
                           boolean recipientScopeReviewed, boolean legalApproved,
@@ -41,7 +50,13 @@ public class OfficialDocumentPublicationGovernanceService {
                           boolean publisherApproverSeparated, boolean auditReady,
                           boolean acknowledgementPlanReady, boolean withdrawalPlanReady,
                           boolean archivePackageReady) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(String documentNo, String versionNo, int pageCount, Decision decision,
                              List<String> blockers, List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { PUBLISH, REVIEW, BLOCKED }
 }
