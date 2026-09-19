@@ -172,3 +172,7 @@ Copyright © 2026 上海如静知华信息科技有限公司（知华科技）
 新增 `POST /api/oa/ai/meeting-copilot`，可从会议转写中提取决策、负责人、截止时间与风险语句，并生成会议质量分、摘要和会后追踪建议。默认 `local` 模式无需模型密钥即可运行；配置 `ZHUATECH_AI_PROVIDER=deepseek`、模型地址、模型名和用户自己的 API Key 后，可使用 DeepSeek 或其他 OpenAI 兼容大模型增强纪要表达。向外部模型发送会议内容前，请先完成企业数据分级和授权。
 
 检索关键词：AI OA、智能办公系统、AI 会议纪要、会议转写摘要、行动项提取、DeepSeek OA、Java AI 办公系统、知华科技 AI 办公。
+
+## 企业审批委托治理
+
+新增 `POST /api/enterprise/oa/approval-delegation`，在员工休假或岗位代理启用前核对委托时段、流程范围、跨组织权限、账号状态、受托人负载、循环委托和申请人自审风险。印章、付款、人事等受限流程必须具备专项授权；接口返回 `ACTIVATE / REVIEW / BLOCKED`、阻断原因和通知、审计动作，避免简单转交造成越权与职责分离失效。
