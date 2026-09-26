@@ -180,3 +180,7 @@ Copyright © 2026 上海如静知华信息科技有限公司（知华科技）
 ## 企业审批委托治理
 
 新增 `POST /api/enterprise/oa/approval-delegation`，在员工休假或岗位代理启用前核对委托时段、流程范围、跨组织权限、账号状态、受托人负载、循环委托和申请人自审风险。印章、付款、人事等受限流程必须具备专项授权；接口返回 `ACTIVATE / REVIEW / BLOCKED`、阻断原因和通知、审计动作，避免简单转交造成越权与职责分离失效。
+
+## 会议资源预订治理
+
+新增 `POST /api/enterprise/oa/meeting-resource-governance`，在会议确认前同时校验时段冲突、人数容量、外部访客、涉密场地、视频设备与跨地点准备。详细规则见 [会议资源预订治理](docs/ENTERPRISE_MEETING_RESOURCE_GOVERNANCE.md)。
