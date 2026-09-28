@@ -1,5 +1,7 @@
 # ZhuaTech OA — 知华科技 OA 社区源码版
 
+[简体中文](README.md) | [English](README.en.md)
+
 ## 企业级审批撤回与重提治理
 
 新增申请权限、流程状态、不可逆业务动作、下游单据锁定、外部系统补偿和审批轨迹保留检查，详见[审批撤回与重提治理](docs/ENTERPRISE_APPROVAL_RECALL.md)。
