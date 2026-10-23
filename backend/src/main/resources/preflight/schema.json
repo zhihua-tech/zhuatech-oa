@@ -1,0 +1,84 @@
+{
+  "slug": "oa",
+  "title": "请假申请日期与额度预检",
+  "fields": [
+    {
+      "key": "request_no",
+      "label": "申请号",
+      "type": "ID",
+      "length": 200
+    },
+    {
+      "key": "employee_no",
+      "label": "工号",
+      "type": "ID",
+      "length": 200
+    },
+    {
+      "key": "start_date",
+      "label": "开始日期",
+      "type": "DATE",
+      "length": 200
+    },
+    {
+      "key": "end_date",
+      "label": "结束日期",
+      "type": "DATE",
+      "length": 200
+    },
+    {
+      "key": "days",
+      "label": "申请天数",
+      "type": "DECIMAL",
+      "length": 200,
+      "scale": 2,
+      "min": "0.01"
+    },
+    {
+      "key": "balance",
+      "label": "剩余额度",
+      "type": "DECIMAL",
+      "length": 200,
+      "scale": 2
+    }
+  ],
+  "unique": [
+    [
+      "request_no"
+    ]
+  ],
+  "rules": [
+    {
+      "op": "DATE_LE",
+      "args": [
+        "start_date",
+        "end_date"
+      ],
+      "code": "LEAVE_DATE",
+      "message": "结束日期不得早于开始日期",
+      "bad": {
+        "end_date": "2026-10-31"
+      }
+    },
+    {
+      "op": "LE",
+      "args": [
+        "days",
+        "balance"
+      ],
+      "code": "LEAVE_BALANCE",
+      "message": "申请天数不能超过剩余额度",
+      "bad": {
+        "days": "11"
+      }
+    }
+  ],
+  "sampleCsv": "request_no,employee_no,start_date,end_date,days,balance\nLEAVE-001,EMP-01,2026-11-01,2026-11-03,3,10\n",
+  "limits": {
+    "rows": 500,
+    "bytes": 262144,
+    "columns": 32,
+    "cellCharacters": 4000
+  },
+  "scope": "Read-only batch validation; no persistence, reference-master lookup or full production certification."
+}
