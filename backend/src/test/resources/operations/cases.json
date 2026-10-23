@@ -1,0 +1,52 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "gapMinutes": "#60",
+      "requiredBufferMinutes": "#45"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "nextStart": "630"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "bufferShortfall": "#15"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "nextStart": "590"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "overlapMinutes": "#10",
+      "bufferShortfall": "#55"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "sameLocation": "YES",
+      "nextStart": "615"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "nextStart": "645"
+    },
+    "expected": {
+      "decision": "PASS",
+      "bufferShortfall": "#0"
+    },
+    "error": false
+  }
+]
